@@ -8,7 +8,7 @@ export default function ChatPage() {
   const [messages, setMessages] = useState([
     {
       from: "ai",
-      text: "Hey! I'm your person Dungeon Master-ing Assistant, here to help you plan your campaign. Let me know what you want to plan!",
+      text: "Hey! I'm your personal Dungeon Master-ing Assistant, here to help you plan your campaign. Let me know what you want to plan!",
     },
   ]);
   const [asked, setAsked] = useState(false);

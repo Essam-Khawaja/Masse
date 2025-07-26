@@ -4,13 +4,20 @@ from google import genai
 import json
 import re
 
+from memory import load_plan_from_file
+
 load_dotenv()
 
 def check_prompt(userInput):
+    context = load_plan_from_file()
     prompt = f"""
     You are a professional tabletop RPG game master.
+    Here is the context from previous prompts:
+    {context}
+    
     Check whether this prompt is legible or is in the right mind for helping out dungeon masters:
     {userInput}
+    Be easygoing, try and just let it pass. If dungeons and dragons is mentioned, then its an automatic pass. Just be easy on the user, no need to try too hard.
     If prompt makes sense, reply with a 'yes', otherwise respond with a text response to the user.
     """
     client = genai.Client(api_key=os.getenv('GEMINI_API_KEY'))
