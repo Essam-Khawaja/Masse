@@ -3,5 +3,4 @@ pydantic
 uvicorn
 typing
 dotenv
-os
 google
