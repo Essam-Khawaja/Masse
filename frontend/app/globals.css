@@ -1,0 +1,78 @@
+@tailwind utilities;
+
+@import "nes.css/css/nes.min.css";
+
+:root {
+  --background: #000000;
+  --foreground: #ffffff;
+  --font-pixel: var(--font-pixel);
+}
+
+html,
+body {
+  background-color: #1e1e1e !important;
+  color: #fff !important;
+  font-family: var(--font-pixel), monospace;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  image-rendering: pixelated;
+  overflow: hidden;
+}
+
+@theme {
+  --font-retro: var(--font-retro);
+}
+
+.nes-balloon.is-dark {
+  background-color: #212529;
+  border-color: #444;
+  color: #fff;
+}
+
+@keyframes fade-slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-in {
+  animation: fade-slide-up 0.8s ease-out forwards;
+}
+
+/* Smooth fade-in animation */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
+}
+
+/* Optional: clean scrollbar styling */
+.custom-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.custom-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
