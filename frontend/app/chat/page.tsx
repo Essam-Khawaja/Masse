@@ -10,6 +10,7 @@ export default function ChatPage() {
       text: "Welcome, adventurer. What tale shall we weave today?",
     },
   ]);
+  const [asked, setAsked] = useState(false);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const chatEndRef = useRef<HTMLDivElement>(null);
@@ -28,15 +29,34 @@ export default function ChatPage() {
     setLoading(true);
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/generate-campaign", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: input }),
-      });
+      if (!asked) {
+        const response = await fetch(
+          "http://127.0.0.1:8000/generate-campaign",
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ message: input }),
+          }
+        );
 
-      const data = await response.json();
-      const aiReply = { from: "ai", text: data.reply };
-      setMessages((prev) => [...prev, aiReply]);
+        const data = await response.json();
+        const aiReply = { from: "ai", text: data.reply };
+        setMessages((prev) => [...prev, aiReply]);
+        setAsked(true);
+      } else {
+        const response = await fetch(
+          "http://127.0.0.1:8000/elaborate-campaign",
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ message: input }),
+          }
+        );
+
+        const data = await response.json();
+        const aiReply = { from: "ai", text: data.reply };
+        setMessages((prev) => [...prev, aiReply]);
+      }
     } catch (err) {
       setMessages((prev) => [
         ...prev,

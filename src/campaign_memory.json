@@ -1,50 +1,51 @@
 {
   "acts": [
     {
-      "title": "Act I: Whispers of the Fading Weave",
-      "summary": "The campaign begins with subtle magical anomalies: cantrips failing, minor magical items flickering, and ley lines reporting instability. Initially dismissed as minor fluctuations, these incidents escalate, drawing the party into an investigation of strange occurrences in a provincial town and its renowned magical academy. They soon discover the anomalies are spreading from deeper within the earth, linked to a fundamental disruption of the world's magical flow.",
+      "title": "Act I: The Blighted Bloom",
+      "summary": "Strange afflictions plague the quiet village of Oakhaven: crops wither, livestock sicken, and villagers fall into a disturbing 'dream-sickness.' The source is traced to the nearby Murky Fen, where a vile corruption has taken root, threatening to consume everything.",
       "locations": [
-        "Oakhaven (Provincial Town)",
-        "The Lyceum Arcana (Magical Academy)",
-        "Sunken Grotto Caverns"
+        "Oakhaven Village",
+        "The Murky Fen",
+        "The Hermitage of Elara"
       ],
       "battle": {
-        "enemy": "Warped Ley-Beast",
-        "enemy_type": "Aberration/Elemental",
-        "challenge_rating": "CR 2",
-        "description": "A formerly peaceful ley-line guardian, this creature has been driven mad by the chaotic magical energy pulsing through its nexus, lashing out at anything that approaches. It appears as a twisted mass of shimmering, unstable energy and jagged crystalline shards.",
-        "twist": "The creature radiates a localized anti-magic aura. Spellcasting within 15ft of the beast requires a successful Concentration check (DC 12 + spell level) or the spell fails and the slot is lost, adding a tactical challenge for spellcasters."
+        "enemy": "Grasping Mire Horror",
+        "enemy_type": "Plant/Aberration",
+        "challenge_rating": "CR 4 (Party Levels 3-4)",
+        "description": "A grotesque tangle of mutated roots, vines, and corrupted bog matter, animated by the fen's blight. It guards a pulsating, blighted heart of the corruption.",
+        "twist": "The creature is vulnerable to radiant energy or direct sunlight, which causes its limbs to shrivel. However, the battlefield is shrouded in thick, acidic mist that provides disadvantage on ranged attacks and deals necrotic damage to those who start their turn in it."
       }
     },
     {
-      "title": "Act II: The Fractured Heart",
-      "summary": "Following clues from Act I, the party learns that the magical instability isn't isolated but a symptom of a much larger problem: a fundamental disruption of the world's magical core, known as the 'Heart of Resonance.' Ancient texts and whispers point to a secretive organization, the 'Oblivion Sages,' who believe magic is a corrupting force and are intentionally accelerating its demise to 'cleanse' the world, or perhaps harness the residual energy for their own dark purposes.",
+      "title": "Act II: Whispers from the Deep",
+      "summary": "The source of the fen's corruption is revealed to be ancient, aberrant energy emanating from the nearby Lake Eldoria. As the party investigates, ancient ruins begin to surface from the lake's depths, drawing the attention of scholarly factions and sinister cultists alike, all seeking the power within.",
       "locations": [
-        "The Blighted Mire",
-        "The Chronos Archives (Hidden Library)",
-        "The Shardstone Mines"
+        "Port Eldoria (Thriving Lakeside City)",
+        "The Sunken City Outskirts (Emerging Ruins)",
+        "The Scribe's Conclave Library"
       ],
       "battle": {
-        "enemy": "Oblivion Sage Executor & Shard-Golems",
-        "enemy_type": "Humanoid (Spellcaster) & Construct",
-        "challenge_rating": "CR 6",
-        "description": "A powerful Oblivion Sage Executor, a master of anti-magic and draining spells, defends the heart of the Shardstone Mines. They are flanked by two grotesque crystalline golems, specifically engineered to absorb and weaponize raw magical energy from the disrupted ley lines.",
-        "twist": "When a Shard-Golem is destroyed, it releases a burst of volatile magical energy in a 10ft radius. Creatures caught in the blast must make a DC 14 Dexterity saving throw or suffer a random magical effect (e.g., take 2d6 force damage, gain a level of exhaustion, suffer disadvantage on the next attack roll, or have their lowest level spell slot expended)."
+        "enemy": "Abyssal Cultist Invocator & Corrupted Water Elementals",
+        "enemy_type": "Humanoid (Spellcaster) & Elemental",
+        "challenge_rating": "CR 8 (Party Levels 7-8)",
+        "description": "A powerful cult leader attempting to open a portal to the abyssal depths within a partially submerged temple chamber, aided by coalesced forms of corrupted lake water.",
+        "twist": "The Invocator's ritual causes unstable energy surges, randomly empowering the elementals or creating temporary areas of difficult terrain/damage. Interrupting the ritual too early might destabilize the temple, causing sections to collapse or flood."
       }
     },
     {
-      "title": "Act III: The Reckoning of Resonance",
-      "summary": "The party uncovers the Oblivion Sages' ultimate plan: to cause a full 'Resonance Collapse,' effectively destroying all magic and allowing them to rebuild the world in their image, harnessing the residual chaos. They have found a way to directly interact with the Heart of Resonance, twisting its purpose. The party must venture into a precarious realm bordering the magical core itself, confronting the ruthless leader of the Sages and deciding the ultimate fate of magic.",
+      "title": "Act III: The Obsidian Heart",
+      "summary": "Having delved deep into the Sunken City, the party uncovers the terrible truth: an ancient, aberrant entity, known as the 'Drowned Sovereign,' was imprisoned here eons ago, and its awakening is causing the widespread blight. The party must now venture to the city's core, a monstrous 'Obsidian Heart,' to either re-seal or destroy the entity before it fully emerges.",
       "locations": [
-        "The Resonant Spire",
-        "The Aetherial Void (The Heart of Resonance)"
+        "The Obsidian Citadel (Central Spire)",
+        "The Chamber of Whispering Glyphs",
+        "The Drowned Sovereign's Throne Room"
       ],
       "battle": {
-        "enemy": "Grand Inquisitor Valerius & The Resonance Engine",
-        "enemy_type": "Humanoid (Legendary Spellcaster) & Device (Environmental Hazard)",
-        "challenge_rating": "CR 10",
-        "description": "Grand Inquisitor Valerius, the fanatical leader of the Oblivion Sages, stands before the very Heart of Resonance, actively manipulating its collapse through a massive, arcane 'Resonance Engine.' The Aetherial Void around them pulses erratically, and the Heart itself discharges uncontrolled magical surges.",
-        "twist": "The Resonance Engine, an indestructible object with its own initiative, siphons magic each round, making spellcasting increasingly difficult. Each turn, it forces spellcasters to make a DC 15 Arcana check. On a failure, their spell slot is consumed but the spell fails, or they suffer 2d8 psychic damage as their magic backfires. The party must choose whether to simply defeat Valerius (leaving the engine running and magic unstable) or attempt to disable/recalibrate the Resonance Engine (requiring successful DC 18 Arcana or Thieves' Tools checks as a multi-stage objective) amidst the combat. Their choice dictates the long-term magical stability of the world."
+        "enemy": "The Drowned Sovereign (Ancient Aberrant Entity)",
+        "enemy_type": "Aberration/Cosmic Horror",
+        "challenge_rating": "CR 13 (Party Levels 12-14)",
+        "description": "The true form of the Drowned Sovereign is a multi-tentacled, telepathic horror that warps reality around it. The battle takes place in its throne room, which is slowly filling with dark, corrosive water.",
+        "twist": "The Sovereign cannot be defeated by brute force alone. Its regeneration is immense unless ancient power conduits (four in the room) are simultaneously overloaded or re-calibrated during combat, requiring complex skill checks and coordinated actions. Failure to do so by the time the room completely floods results in a near-impossible fight or a TPK."
       }
     }
   ]

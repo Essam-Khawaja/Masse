@@ -5,7 +5,7 @@ import uvicorn  # To run the API locally
 from typing import List # A type for the schemas
 
 from planner import planner_executor
-from executor import get_user_text
+from executor import get_user_text, elaborate_campaign
 
 from memory import save_plan_to_file, load_plan_from_file
 
@@ -55,5 +55,13 @@ async def generate_campaign(req: CampaignRequest):
         save_plan_to_file(plan)
         reply = get_user_text(plan)
         return {"reply": reply}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to generate plan: {e}")
+    
+@app.post("/elaborate-campaign")
+async def elaborate_campaign_route(req: CampaignRequest):
+    try:
+        response = elaborate_campaign(req.message)
+        return {"reply": response}
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to generate plan: {e}")

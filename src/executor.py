@@ -2,6 +2,8 @@ import os
 from dotenv import load_dotenv
 from google import genai
 
+from memory import load_plan_from_file
+
 load_dotenv()
 
 
@@ -19,6 +21,23 @@ def get_user_text(plan):
     prompt = generate_executor_prompt(plan)
     client = genai.Client(api_key=os.getenv('GEMINI_API_KEY'))
 
+    response = client.models.generate_content(
+        model="gemini-2.5-flash",
+        contents=prompt
+    )
+    return response.text
+
+def elaborate_campaign(userInput):
+    context = load_plan_from_file()
+    prompt = f"""
+    You are an expert Dungeon Master crafting an immersive and balanced content for a tabletop RPG Campaign.
+    Here is the context planned so far: 
+    {context}
+
+    Use this context to respond to the user's prompt:
+    {userInput}
+    """
+    client = genai.Client(api_key=os.getenv('GEMINI_API_KEY'))
     response = client.models.generate_content(
         model="gemini-2.5-flash",
         contents=prompt
