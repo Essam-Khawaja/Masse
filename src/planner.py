@@ -6,6 +6,23 @@ import re
 
 load_dotenv()
 
+def check_prompt(userInput):
+    prompt = f"""
+    You are a professional tabletop RPG game master.
+    Check whether this prompt is legible or is in the right mind for helping out dungeon masters:
+    {userInput}
+    If prompt makes sense, reply with a 'yes', otherwise respond with a text response to the user.
+    """
+    client = genai.Client(api_key=os.getenv('GEMINI_API_KEY'))
+
+    response = client.models.generate_content(
+        model="gemini-2.5-flash",
+        contents=generate_planner_prompt(userInput)
+    )
+
+    return response.text
+
+
 def generate_planner_prompt(userInput):
     return f"""
     You are a professional tabletop RPG game master. Generate a full 3-act fantasy RPG adventure campaign.

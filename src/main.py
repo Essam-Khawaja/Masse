@@ -4,7 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware  # Need to use CORS for NextJ
 import uvicorn  # To run the API locally
 from typing import List # A type for the schemas
 
-from planner import planner_executor
+from planner import planner_executor, check_prompt
 from executor import get_user_text, elaborate_campaign
 
 from memory import save_plan_to_file, load_plan_from_file
@@ -49,12 +49,17 @@ def root():
 @app.post("/generate-campaign")
 async def generate_campaign(req: CampaignRequest):
     try:
-        plan = planner_executor(
-            req.message
-        )
-        save_plan_to_file(plan)
-        reply = get_user_text(plan)
-        return {"reply": reply}
+        check_prompt = check_prompt(req.message)
+        print(check_prompt)
+        if check_prompt.lower() == 'yes':
+            plan = planner_executor(
+                req.message
+            )
+            save_plan_to_file(plan)
+            reply = get_user_text(plan)
+            return {"reply": reply}
+        else: 
+            return {"reply": check_prompt}
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to generate plan: {e}")
     
