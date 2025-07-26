@@ -49,9 +49,9 @@ def root():
 @app.post("/generate-campaign")
 async def generate_campaign(req: CampaignRequest):
     try:
-        check_prompt = check_prompt(req.message)
-        print(check_prompt)
-        if check_prompt.lower() == 'yes':
+        checkPrompt = check_prompt(req.message)
+        print(checkPrompt)
+        if checkPrompt.lower() == 'yes':
             plan = planner_executor(
                 req.message
             )
@@ -59,7 +59,7 @@ async def generate_campaign(req: CampaignRequest):
             reply = get_user_text(plan)
             return {"reply": reply}
         else: 
-            return {"reply": check_prompt}
+            return {"reply": checkPrompt}
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to generate plan: {e}")
     
