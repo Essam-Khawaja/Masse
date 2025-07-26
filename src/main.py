@@ -19,30 +19,13 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Making the Campaign Request Type
-class Battle(BaseModel):
-    enemy: str
-    enemy_type: str
-    challenge_rating: str
-    description: str
-    twist: str
-
-class Act(BaseModel):
-    title: str
-    summary: str
-    locations: List[str]
-    battle: Battle
-
-class CampaignPlan(BaseModel):
-    acts: List[Act]
-
 class CampaignRequest(BaseModel):
     message: str
 
 
 
 # Below are all the paths to the API:
-@app.get("/test")
+@app.get("/")
 def root():
     return {'message': 'AI Dungeon Master is RUNNING LETS GOOO!'}
 
@@ -66,7 +49,11 @@ async def generate_campaign(req: CampaignRequest):
 @app.post("/elaborate-campaign")
 async def elaborate_campaign_route(req: CampaignRequest):
     try:
-        response = elaborate_campaign(req.message)
-        return {"reply": response}
+        checkPrompt = check_prompt(req.message)
+        if checkPrompt.lower() == 'yes':
+            response = elaborate_campaign(req.message)
+            return {"reply": response}
+        else:
+            return {'reply': checkPrompt}
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to generate plan: {e}")
