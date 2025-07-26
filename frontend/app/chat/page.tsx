@@ -31,7 +31,7 @@ export default function ChatPage() {
     try {
       if (!asked) {
         const response = await fetch(
-          "http://127.0.0.1:8000/generate-campaign",
+          "https://masse.onrender.com/generate-campaign",
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -45,7 +45,7 @@ export default function ChatPage() {
         setAsked(true);
       } else {
         const response = await fetch(
-          "http://127.0.0.1:8000/elaborate-campaign",
+          "https://masse.onrender.com/elaborate-campaign",
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -97,7 +97,7 @@ export default function ChatPage() {
                 <div
                   className={`nes-balloon ${
                     msg.from === "user" ? "from-right" : "from-left"
-                  } is-dark separate-chat`}
+                  } is-dark separate-chat text-balance lg:max-w-1/2 `}
                 >
                   <ReactMarkdown>{msg.text}</ReactMarkdown>
                 </div>

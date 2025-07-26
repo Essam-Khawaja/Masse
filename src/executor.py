@@ -15,6 +15,8 @@ def generate_executor_prompt(plan):
     {plan}
 
     I want you to generate a user-friendly, and well typed out explnantion of this for the user to understand what is going on.
+    Do not use nested bullet points, or any other convulted lists.
+    Write it out with emojis and beautiful markdown language.
     """
 
 def get_user_text(plan):
