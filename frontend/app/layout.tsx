@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${pressStart2P.variable} font-pixel bg-black text-white`}
+        className={`${pressStart2P.variable} ${vt323.variable} font-pixel bg-black text-white`}
       >
         {children}
       </body>

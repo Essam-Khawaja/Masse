@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import ReactMarkdown from "react-markdown";
 
@@ -73,16 +74,16 @@ export default function ChatPage() {
   return (
     <div className="padding-chat flex flex-col justify-center items-center h-screen">
       <div className="flex justify-between w-full">
-        <a className="nes-btn" href="/">
+        <Link className="nes-btn" href="/">
           &larr;
-        </a>
+        </Link>
       </div>
       <h1 className="text-5xl mb-4">AI Dungeon Master</h1>
       <div className="p-10 w-full">
         <section className="nes-container with-title is-dark p-4 min-h-[75vh] max-h-[80vh] flex flex-col">
           <p className="title">Chat</p>
 
-          <div className="flex-1 overflow-y-auto space-y-4 pr-2 custom-scroll">
+          <div className="flex-1 overflow-y-auto space-y-4 pr-2 custom-scroll font-retro">
             {messages.map((msg, idx) => (
               <div
                 key={idx}
@@ -97,7 +98,7 @@ export default function ChatPage() {
                 <div
                   className={`nes-balloon ${
                     msg.from === "user" ? "from-right" : "from-left"
-                  } is-dark separate-chat text-balance lg:max-w-1/2 `}
+                  } is-dark separate-chat text-wrap max-w-[95%] chat-text lg:max-w-1/2`}
                 >
                   <ReactMarkdown>{msg.text}</ReactMarkdown>
                 </div>
@@ -106,7 +107,7 @@ export default function ChatPage() {
             {loading && (
               <div className="flex justify-start animate-fade-in">
                 <div className="nes-balloon from-left is-dark p-2">
-                  <p>Typing...</p>
+                  <p className="chat-text">Typing...</p>
                 </div>
               </div>
             )}
@@ -117,14 +118,14 @@ export default function ChatPage() {
           <div className="mt-4 flex items-center gap-2">
             <input
               type="text"
-              className="nes-input w-full"
+              className="nes-input w-full input-text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && sendMessage()}
               placeholder="Type your message..."
             />
             <button
-              className="nes-btn is-primary"
+              className="nes-btn is-primary input-text"
               onClick={sendMessage}
               disabled={loading}
             >

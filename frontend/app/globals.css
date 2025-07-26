@@ -39,6 +39,24 @@ body {
   margin-bottom: 5rem;
 }
 
+.chat-text {
+  font-size: 2rem;
+}
+
+.input-text {
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  .chat-text {
+    font-size: 1.5rem;
+  }
+
+  .input-text {
+    font-size: 0.7rem;
+  }
+}
+
 .padding-chat {
   padding: 2rem;
 }
