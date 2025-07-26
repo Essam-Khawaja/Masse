@@ -1,6 +1,6 @@
 @tailwind utilities;
-
 @import "nes.css/css/nes.min.css";
+@config "../tailwind.config.js";
 
 :root {
   --background: #000000;
@@ -29,6 +29,18 @@ body {
   background-color: #212529;
   border-color: #444;
   color: #fff;
+}
+
+.separate {
+  margin-bottom: 10rem;
+}
+
+.separate-chat {
+  margin-bottom: 5rem;
+}
+
+.padding-chat {
+  padding: 2rem;
 }
 
 @keyframes fade-slide-up {

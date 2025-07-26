@@ -1,51 +1,51 @@
 {
   "acts": [
     {
-      "title": "Act I: The Blighted Bloom",
-      "summary": "Strange afflictions plague the quiet village of Oakhaven: crops wither, livestock sicken, and villagers fall into a disturbing 'dream-sickness.' The source is traced to the nearby Murky Fen, where a vile corruption has taken root, threatening to consume everything.",
+      "title": "Act I: The Whispering Blight",
+      "summary": "The campaign begins in the quaint village of Oakhaven, nestled in the Whisperwind Dale, a secluded part of the Silver Marches. Strange phenomena are plaguing the region: the forests are becoming unnaturally dark and twisted, animals are aggressive and sickly, and a creeping, grey fungus, dubbed 'Gloom-Weave,' is slowly devouring the natural world. The party must investigate these disturbing events, contain the immediate threats, and discover the local source of the blight. (Party Levels 1-4)",
       "locations": [
         "Oakhaven Village",
-        "The Murky Fen",
-        "The Hermitage of Elara"
+        "The Whispering Woods",
+        "The Sunken Cairn"
       ],
       "battle": {
-        "enemy": "Grasping Mire Horror",
+        "enemy": "Gloom-Weave Treant Sapling",
         "enemy_type": "Plant/Aberration",
-        "challenge_rating": "CR 4 (Party Levels 3-4)",
-        "description": "A grotesque tangle of mutated roots, vines, and corrupted bog matter, animated by the fen's blight. It guards a pulsating, blighted heart of the corruption.",
-        "twist": "The creature is vulnerable to radiant energy or direct sunlight, which causes its limbs to shrivel. However, the battlefield is shrouded in thick, acidic mist that provides disadvantage on ranged attacks and deals necrotic damage to those who start their turn in it."
+        "challenge_rating": "CR 3",
+        "description": "While investigating a particularly corrupted section of the Whispering Woods, the party encounters a once-majestic young treant, now grotesquely bloated and covered in the Gloom-Weave. It lashes out with corrupted branches and emits sickly spores, determined to protect the source of its corruption.",
+        "twist": "The treant is bound to a dying dryad who is trapped within its core; defeating the treant without saving the dryad will release a burst of concentrated Gloom-Weave energy, causing a temporary magical desolation in the area and attracting more blight-creatures. A successful Wisdom (Medicine) or Intelligence (Arcana) check might reveal a way to sever the dryad's connection non-lethally, offering a path to salvation instead of destruction."
       }
     },
     {
-      "title": "Act II: Whispers from the Deep",
-      "summary": "The source of the fen's corruption is revealed to be ancient, aberrant energy emanating from the nearby Lake Eldoria. As the party investigates, ancient ruins begin to surface from the lake's depths, drawing the attention of scholarly factions and sinister cultists alike, all seeking the power within.",
+      "title": "Act II: Tracing the Twisted Roots",
+      "summary": "The localized outbreaks in Oakhaven prove to be just the tendrils of a far larger problem. The party learns that similar, but more severe, blights are appearing across the Silver Marches and beyond. Their investigations lead them to suspect an ancient, magical origin, possibly tied to the lost Netherese Empire. They must travel to a major city like Silverymoon to seek knowledge and then delve into forgotten ruins to pinpoint the true source of the burgeoning Gloom-Weave. (Party Levels 5-8)",
       "locations": [
-        "Port Eldoria (Thriving Lakeside City)",
-        "The Sunken City Outskirts (Emerging Ruins)",
-        "The Scribe's Conclave Library"
+        "The City of Silverymoon",
+        "The Sunken Spire of Aerith'dun (Netherese Ruin)",
+        "The Obsidian Crevasse"
       ],
       "battle": {
-        "enemy": "Abyssal Cultist Invocator & Corrupted Water Elementals",
-        "enemy_type": "Humanoid (Spellcaster) & Elemental",
-        "challenge_rating": "CR 8 (Party Levels 7-8)",
-        "description": "A powerful cult leader attempting to open a portal to the abyssal depths within a partially submerged temple chamber, aided by coalesced forms of corrupted lake water.",
-        "twist": "The Invocator's ritual causes unstable energy surges, randomly empowering the elementals or creating temporary areas of difficult terrain/damage. Interrupting the ritual too early might destabilize the temple, causing sections to collapse or flood."
+        "enemy": "Gloom-Weave Construct",
+        "enemy_type": "Construct/Aberration",
+        "challenge_rating": "CR 7",
+        "description": "Deep within the Netherese ruin of Aerith'dun, the party disturbs an ancient magical construct, a guardian animated and corrupted by the Gloom-Weave. This hulking automaton attacks with powerful, blighted fists and can project localized fields of magical dissonance, protecting a vital clue or artifact.",
+        "twist": "The construct is powered by a network of pulsating Gloom-Weave tendrils that also bind four smaller, weaker 'Gloom-Servitor' constructs. Destroying the servitors weakens the main construct significantly, but each one explodes into a cloud of debilitating spores (Constitution saving throw vs. poison/exhaustion) upon defeat. The construct has a central weak point that only becomes vulnerable after two servitors are destroyed, forcing the party to manage multiple threats simultaneously."
       }
     },
     {
-      "title": "Act III: The Obsidian Heart",
-      "summary": "Having delved deep into the Sunken City, the party uncovers the terrible truth: an ancient, aberrant entity, known as the 'Drowned Sovereign,' was imprisoned here eons ago, and its awakening is causing the widespread blight. The party must now venture to the city's core, a monstrous 'Obsidian Heart,' to either re-seal or destroy the entity before it fully emerges.",
+      "title": "Act III: The Heart of the Gloom",
+      "summary": "With clues gathered from the ancient ruins, the party uncovers the horrifying truth: the Gloom-Weave is a sentient magical entity, a catastrophic byproduct of a failed Netherese arch-wizard's attempt to merge raw arcane energy with life force. It has been dormant for millennia, slowly consuming ambient magic, and is now fully awakening within a hidden, extra-dimensional pocket located deep beneath the Silver Marches. The party must journey into its core, confront its insidious will, and find a way to sever its connection to the Weave or destroy it entirely. (Party Levels 9-12)",
       "locations": [
-        "The Obsidian Citadel (Central Spire)",
-        "The Chamber of Whispering Glyphs",
-        "The Drowned Sovereign's Throne Room"
+        "The Buried City of Xylos (Entrance to a demiplane)",
+        "The Astral Confluence Chamber",
+        "The Gloom-Weave Nexus"
       ],
       "battle": {
-        "enemy": "The Drowned Sovereign (Ancient Aberrant Entity)",
-        "enemy_type": "Aberration/Cosmic Horror",
-        "challenge_rating": "CR 13 (Party Levels 12-14)",
-        "description": "The true form of the Drowned Sovereign is a multi-tentacled, telepathic horror that warps reality around it. The battle takes place in its throne room, which is slowly filling with dark, corrosive water.",
-        "twist": "The Sovereign cannot be defeated by brute force alone. Its regeneration is immense unless ancient power conduits (four in the room) are simultaneously overloaded or re-calibrated during combat, requiring complex skill checks and coordinated actions. Failure to do so by the time the room completely floods results in a near-impossible fight or a TPK."
+        "enemy": "The Gloom-Weave Incarnate",
+        "enemy_type": "Aberration/Legendary Creature",
+        "challenge_rating": "CR 11",
+        "description": "In the heart of the Nexus, the party faces the Gloom-Weave Incarnate: a swirling, formless entity of purple and black energy, tendrils of arcane blight lashing out. It attacks with powerful magical assaults, siphoning life and magic, and warping reality around it, seeking to consume all it touches.",
+        "twist": "The battle takes place within an unstable extra-dimensional pocket where the boundaries between planes are thin. At the start of each round, roll a d4: 1-2 (Anti-Magic Field: all spells fail), 3 (Wild Magic Surge: a random magical effect from the Wild Magic Surge table), 4 (Weave Overload: all spellcasters regain one expended spell slot of 3rd level or lower, but also take 2d6 force damage). Furthermore, the Incarnate attempts to mentally corrupt one party member per round, offering them immense power if they betray their companions and allow the Gloom-Weave to consume Faer\u00fbn."
       }
     }
   ]
