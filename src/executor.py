@@ -14,7 +14,7 @@ def generate_executor_prompt(plan):
     Here is the plan we are going to follow based on three acts:
     {plan}
 
-    I want you to generate a user-friendly, and well typed out explnantion of this for the user to understand what is going on.
+    I want you to generate a user-friendly, and well typed out explnation of this for the user to understand what is going on.
     Do not use nested bullet points, or any other convulted lists.
     Write it out with emojis and beautiful markdown language.
     """
@@ -38,6 +38,9 @@ def elaborate_campaign(userInput):
 
     Use this context to respond to the user's prompt:
     {userInput}
+    I want you to generate a user-friendly, and well typed out explnation of this for the user to understand what is going on.
+    Do not use nested bullet points, or any other convulted lists.
+    Write it out with emojis and beautiful markdown language.
     """
     client = genai.Client(api_key=os.getenv('GEMINI_API_KEY'))
     response = client.models.generate_content(
