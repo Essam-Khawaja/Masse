@@ -8,7 +8,7 @@ export default function ChatPage() {
   const [messages, setMessages] = useState([
     {
       from: "ai",
-      text: "Welcome, adventurer. What tale shall we weave today?",
+      text: "Hey! I'm your person Dungeon Master-ing Assistant, here to help you plan your campaign. Let me know what you want to plan!",
     },
   ]);
   const [asked, setAsked] = useState(false);
@@ -98,7 +98,7 @@ export default function ChatPage() {
                 <div
                   className={`nes-balloon ${
                     msg.from === "user" ? "from-right" : "from-left"
-                  } is-dark separate-chat text-wrap max-w-[95%] chat-text lg:max-w-1/2`}
+                  } is-dark separate-chat text-wrap max-w-[95%] chat-text md:max-w-1/2`}
                 >
                   <ReactMarkdown>{msg.text}</ReactMarkdown>
                 </div>

@@ -17,7 +17,7 @@ def check_prompt(userInput):
 
     response = client.models.generate_content(
         model="gemini-2.5-flash",
-        contents=generate_planner_prompt(userInput)
+        contents=prompt
     )
 
     return response.text
